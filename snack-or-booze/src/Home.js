@@ -1,18 +1,38 @@
 import React from "react";
-import { Card, CardBody, CardTitle } from "reactstrap";
-
-function Home() {
+import { Card, CardBody, CardTitle, CardText } from "reactstrap";
+import { Link } from "react-router-dom";
+function Home({ snacks, drinks }) {
   return (
-    <section className="col-md-8">
+    <section className="col-md-9">
       <Card>
         <CardBody className="text-center">
-          <CardTitle>
-            <h3 className="font-weight-bold">
-              Welcome to Silicon Valley's premier dive cafe!
-            </h3>
+          <CardTitle className="font-weight-bold display-4">
+            Welcome to Silicon Valley's premier dive cafe!
           </CardTitle>
         </CardBody>
       </Card>
+      <div className="row col-12 justify-content-between">
+        <Card className="col-md-5">
+          <CardBody>
+            <CardTitle className="font-weight-bold text-center">
+              <Link to="/snacks">Snack Menu</Link>
+            </CardTitle>
+            <CardText>
+              We have {snacks.length} Snacks on our Menu today.
+            </CardText>
+          </CardBody>
+        </Card>
+        <Card className="col-md-5">
+          <CardBody>
+            <CardTitle className="font-weight-bold text-center">
+              <Link to="/drinks">Drink Menu</Link>
+            </CardTitle>
+            <CardText>
+              We have {drinks.length} Drinks on our Menu today.
+            </CardText>
+          </CardBody>
+        </Card>
+      </div>
     </section>
   );
 }
