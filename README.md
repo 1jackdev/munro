@@ -1,4 +1,4 @@
-for Snack or Booze function:
+for Snack or Booze:
 
 
 ```
