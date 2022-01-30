@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardBody, CardTitle, CardText } from "reactstrap";
 import { Link } from "react-router-dom";
-function Home({ snacks, drinks }) {
+function Home(drinks) {
   return (
     <section className="col-md-9">
       <Card>
@@ -15,21 +15,9 @@ function Home({ snacks, drinks }) {
         <Card className="col-md-5">
           <CardBody>
             <CardTitle className="font-weight-bold text-center">
-              <Link to="/snacks">Snack Menu</Link>
-            </CardTitle>
-            <CardText>
-              We have {snacks.length} Snacks on our Menu today.
-            </CardText>
-          </CardBody>
-        </Card>
-        <Card className="col-md-5">
-          <CardBody>
-            <CardTitle className="font-weight-bold text-center">
               <Link to="/drinks">Drink Menu</Link>
             </CardTitle>
-            <CardText>
-              We have {drinks.length} Drinks on our Menu today.
-            </CardText>
+            <CardText>We have {drinks} Drinks on our Menu today.</CardText>
           </CardBody>
         </Card>
       </div>
