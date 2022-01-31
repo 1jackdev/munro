@@ -1,36 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Menu.css";
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  ListGroup,
-  ListGroupItem,
-} from "reactstrap";
+import { Card, ListGroup } from "react-bootstrap";
 
-function Menu({ food, title }) {
+function Menu({ roasts }) {
   // takes in a list of items and returns a card menu
   return (
     <section className="col-md-4">
       <Card>
-        <CardBody>
-          <CardTitle className="font-weight-bold text-center">
-            {title} Menu
-          </CardTitle>
-          <CardText>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </CardText>
+        <Card.Body>
+          <Card.Title className="font-weight-bold text-center">
+            Hometown Collection
+          </Card.Title>
+          <Card.Text>
+            Our roasts can vary from month to month, so let us know if there is
+            something you would like to see more often!
+          </Card.Text>
           <ListGroup>
-            {food.map((item) => (
-              <Link to={`/${title}/${item.id}`} key={item.id}>
-                <ListGroupItem>{item.name}</ListGroupItem>
+            {roasts.map((item) => (
+              <Link to={`/roasts/${item.name}`} key={item.name}>
+                <ListGroup.Item>{item.name}</ListGroup.Item>
               </Link>
             ))}
           </ListGroup>
-        </CardBody>
+        </Card.Body>
       </Card>
     </section>
   );

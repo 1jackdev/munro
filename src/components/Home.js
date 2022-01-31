@@ -1,24 +1,21 @@
 import React from "react";
-import { Card, CardBody, CardTitle, CardText } from "reactstrap";
+import "./Home.css"
+import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-function Home(drinks) {
+
+function Home({ roasts }) {
   return (
-    <section className="col-md-9">
-      <Card>
-        <CardBody className="text-center">
-          <CardTitle className="font-weight-bold display-4">
-            Welcome to Silicon Valley's premier dive cafe!
-          </CardTitle>
-        </CardBody>
-      </Card>
-      <div className="row col-12 justify-content-between">
-        <Card className="col-md-5">
-          <CardBody>
-            <CardTitle className="font-weight-bold text-center">
-              <Link to="/drinks">Drink Menu</Link>
-            </CardTitle>
-            <CardText>We have {drinks} Drinks on our Menu today.</CardText>
-          </CardBody>
+    <section className="col-sm-4 col-md-9">
+      <div className="row col-sm-4 col-md-12 justify-content-center">
+        <Card>
+          <Card.Body>
+            <Card.Title className="font-weight-bold text-center">
+              <Link to="/roasts">Roast Menu</Link>
+            </Card.Title>
+            <Card.Text>
+              We have {roasts.length} Roasts currently available for order.
+            </Card.Text>
+          </Card.Body>
         </Card>
       </div>
     </section>

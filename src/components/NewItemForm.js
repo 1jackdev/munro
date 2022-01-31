@@ -1,5 +1,4 @@
 import { React, useState, useContext } from "react";
-import SnackOrBoozeApi from "./Api";
 import FoodContext from "./FoodContext";
 
 const NewItemForm = () => {
@@ -25,7 +24,6 @@ const NewItemForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await SnackOrBoozeApi.addItem(formData);
     setFormData(INITIAL_STATE);
     // when we call the set function below,
     // we will trigger the useEffect in App.js
