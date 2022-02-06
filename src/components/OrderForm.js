@@ -65,6 +65,7 @@ const OrderForm = ({ roasts }) => {
       setIsSubmitting(true);
       setShowSuccess(false);
       setShowError(false);
+      setShowFormError(false);
 
       const resp = await sendDataToSheet(formData);
 
