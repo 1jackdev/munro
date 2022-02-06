@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const API_URL =
-  "https://script.google.com/macros/s/AKfycbwxX38XSg4vDjQQmjU6RclynxM9fU1rVVN9s2HoFxmXXW3RG3vLXP4jSIPcIlFY-Y92/exec";
+  "https://script.google.com/macros/s/AKfycbxspBQoe-6egXDGHqMq-h8dTw-UcAFmnE5L7760n64TlpvGdWIz_kbjZY8HEdhsmXoI/exec";
 
 const sendDataToSheet = async (data) => {
   const url = API_URL;
