@@ -1,8 +1,11 @@
 import { Route, Switch, Link } from "react-router-dom";
-import Home from "./components/Home";
-import RoastItem from "./components/RoastItem";
-import Menu from "./components/Menu";
-import Button from "react-bootstrap/Button";
+import Home from "./components/Home.js";
+import RoastItem from "./components/RoastItem.js";
+import Menu from "./components/Menu.js";
+import About from "./components/About.js";
+import Contact from "./components/Contact.js";
+import OrderPage from "./components/OrderPage.js";
+import { Button } from "react-bootstrap";
 
 function Routes({ roasts }) {
   return (
@@ -14,9 +17,19 @@ function Routes({ roasts }) {
         <Route exact path="/roasts">
           <Menu roasts={roasts} />
         </Route>
-        <Route path="/roasts/:name">
-          <RoastItem items={roasts} cantFind="/roasts" />
+        <Route exact path="/about">
+          <About />
         </Route>
+        <Route exact path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/roasts/:name">
+          <RoastItem roasts={roasts} cantFind="/roasts" />
+        </Route>
+        <Route exact path="/order">
+          <OrderPage roasts={roasts} />
+        </Route>
+
         <Route>
           <p>Hmmm. I can't seem to find what you want.</p>
           <Link to="/">

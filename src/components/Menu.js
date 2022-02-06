@@ -18,8 +18,8 @@ function Menu({ roasts }) {
           </Card.Text>
           <ListGroup>
             {roasts.map((item) => (
-              <Link to={`/roasts/${item.name}`} key={item.name}>
-                <ListGroup.Item>{item.name}</ListGroup.Item>
+              <Link to={`/roasts/${item.Name}`} key={item.Name}>
+                <ListGroup.Item>{item.Name}</ListGroup.Item>
               </Link>
             ))}
           </ListGroup>

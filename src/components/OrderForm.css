@@ -1,0 +1,20 @@
+span {
+  color: black;
+}
+
+form {
+  margin: auto;
+}
+
+.form-control {
+  margin-top: 1rem;
+  text-align: start;
+}
+
+.form-group {
+  text-align: center;
+}
+
+.alert-btn {
+  text-align: center;
+}

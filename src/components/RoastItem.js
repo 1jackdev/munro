@@ -3,10 +3,10 @@ import { Redirect, useParams } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import "./RoastItem.css";
 
-function RoastItem({ items, cantFind }) {
+function RoastItem({ roasts, cantFind }) {
   const { name } = useParams();
 
-  let foodItem = items.find((item) => item.name === name);
+  let foodItem = roasts.find((item) => item.Name === name);
   if (!foodItem) return <Redirect to={cantFind} />;
 
   return (
@@ -14,9 +14,10 @@ function RoastItem({ items, cantFind }) {
       <Card>
         <Card.Body>
           <Card.Title className="font-weight-bold text-center">
-            {foodItem.name}
+            {foodItem.Name}
           </Card.Title>
-          <Card.Text className="font-italic">{foodItem.description}</Card.Text>
+          <Card.Text className="font-italic">{foodItem.Description}</Card.Text>
+          <a href="/order">Order Now</a>
         </Card.Body>
       </Card>
     </section>

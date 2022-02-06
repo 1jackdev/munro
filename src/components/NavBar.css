@@ -8,6 +8,11 @@ img {
   margin: 0 1rem;
 }
 
+.title {
+  font-family: Almendra SC;
+  font-weight: 700;
+}
+
 .navbar-brand {
   font-size: 1.5rem;
 }
@@ -20,7 +25,7 @@ img {
   text-align: center;
 }
 
-nav a:hover {
+.nav-link:hover {
   color: #000000;
   font-weight: bold;
   text-decoration: none;

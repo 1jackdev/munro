@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Home({ roasts }) {
   return (
-    <section className="col-sm-4 col-md-9">
+    <div className="container col-sm-4 col-md-9">
       <div className="row col-sm-4 col-md-12 justify-content-center">
         <Card>
           <Card.Body>
@@ -18,7 +18,7 @@ function Home({ roasts }) {
           </Card.Body>
         </Card>
       </div>
-    </section>
+    </div>
   );
 }
 
