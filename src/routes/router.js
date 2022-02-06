@@ -1,4 +1,4 @@
-const sendDataToSheet = require("../handlers/order.js");
+const sendDataToSheet = require("../../handlers/order.js");
 const express = require("express");
 const router = express.Router();
 

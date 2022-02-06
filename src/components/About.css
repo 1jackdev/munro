@@ -1,7 +1,11 @@
+.photo {
+  margin-top: calc(10% - 40px);
+}
+
 @media only screen and (max-width: 600px) {
   .photo {
     width: calc(100% - 40px);
     height: calc(30%);
-    margin-top: 20px;
+    margin-top: calc(20%);
   }
 }

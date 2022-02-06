@@ -6,7 +6,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   overflow: scroll;
   background: url('/public/beans.jpg') no-repeat;
   background-size: cover;
