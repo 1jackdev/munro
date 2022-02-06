@@ -1,7 +1,7 @@
+require("dotenv").config();
 const axios = require("axios");
 
-const API_URL =
-  "https://script.google.com/macros/s/AKfycbxspBQoe-6egXDGHqMq-h8dTw-UcAFmnE5L7760n64TlpvGdWIz_kbjZY8HEdhsmXoI/exec";
+const API_URL = process.env.API_URL;
 
 const sendDataToSheet = async (data) => {
   const url = API_URL;
